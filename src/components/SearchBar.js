@@ -15,7 +15,7 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <div className="row" style={{marginTop: '20px', marginLeft:'20px'}}>
+            <div className="row" style={{marginTop: '20px'}}>
                 <form className="col s10 m8" onSubmit={this.onFormSubmit}>
                     <div className="row">
                         <div className="input-field col s10">

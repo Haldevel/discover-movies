@@ -35,7 +35,7 @@ class App extends React.Component {
     };
 
     render() {
-        return <div >
+        return <div className="container">
             <SearchBar onSubmit = {this.onSearchSubmit}/> 
             <MoviesList movies = {this.state.movies}/>
             </div>        
