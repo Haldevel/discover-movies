@@ -4,10 +4,25 @@ const imageStyle = {
     //maxHeight: "350px",
     margin: "auto",
     display: "block"
-  };
+};
+const titleDiv = {
+    fontSize: "22px",
+    position: "absolute",
+    bottom: "0",
+    left: "0",
+    width: "100%",
+    height: "50px",
+    background: "#00838f", 
+    opacity: ".8",
+    padding: "0, 5%, 30px, 5%",
+    color: "#FFF"
+
+}
+
 
 const MoviesList = props => {
-    /*  return (
+    /*  the code commented out but it can be used to display a list of movies
+    return (
       <ul className="list-group">
      {props.movies.map(movie => (
        <li className="list-group-item" key={movie.id}>
@@ -17,27 +32,24 @@ const MoviesList = props => {
    </ul> */
     return (
 
-        <div className="row">
-           
-                {props.movies.map(movie => (
-
-                    <div className="col s6 m4 l3">
-                    <div className="card medium">
+        <div className="row"> 
+            {props.movies.map(movie => (
+                <div className="col m4 l3">
+                    <div className="card medium z-depth-1 hoverable">
                         <div className="card-image">
-                            <img className="responsive-img" style={imageStyle} src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}/><span className="card-title">{movie.title}</span>
+                            <img className="responsive-img" style={imageStyle} src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} />
+                            <span className="card-title" style={titleDiv}>{movie.title}</span>
                         </div>
-                        <div class="card-content">
-                            <p>{movie.overview}</p>
+                        <div className="card-content">
+                            <h6>Popularity Rating: {movie.vote_average}</h6>
+                            <p className="truncate">{movie.overview}</p>
                         </div>
-                        <div class="card-action">
-                            <a href="#">Click for details</a>
+                        <div className="card-action">
+                            <a class =" teal-text  text-lighten-1" href="#">Click for details</a>
                         </div>
-
                     </div>
-                    </div>
-
-                ))}
-           
+                </div>
+            ))}
         </div>
     )
 }
