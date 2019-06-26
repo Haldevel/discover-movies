@@ -2,6 +2,10 @@ import React from 'react';
 import API from "../utils/API";
 import { Link } from "react-router-dom";
 
+const imageStyle = {
+    marginTop: "20px"
+};
+
 class Movie extends React.Component {
 
     state = {
@@ -50,17 +54,24 @@ class Movie extends React.Component {
             <div className="container">
                 <div className="divider"></div>
                 <div className="section">
-                    <h5>{this.state.title}</h5>
+                    <div class="row valign-wrapper">
+                        <div class="col s3">
+                            <h5>{this.state.title}</h5>
+                        </div>
+                        <div class="col s9">
+                            <p>{this.state.overview}</p>
+                        </div>
+                    </div>
                 </div>
                 <div className="divider"></div>
                 <div class="row">
 
                     <div class="col s3">
 
-                        <img className="responsive-img" alt={this.state.title} src={`https://image.tmdb.org/t/p/w200/${this.state.poster}`} />
+                        <img className="circle responsive-img z-depth-1" style={imageStyle} alt={this.state.title} src={`https://image.tmdb.org/t/p/w200/${this.state.poster}`} />
                     </div>
                     <div class="col s5">
-                        <p>{this.state.overview}</p>
+                    
                     </div>
                     <div class="col s4">
                         <div className="section">
