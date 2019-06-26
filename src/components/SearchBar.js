@@ -1,5 +1,12 @@
 import React from 'react';
 
+const btnStyle = {
+    paddingLeft: "20px",
+    paddingRight: "20px",
+    marginTop: "5px",
+    marginLeft: "20px",
+}
+
 //class component SearchBar
 class SearchBar extends React.Component {
 
@@ -22,8 +29,11 @@ class SearchBar extends React.Component {
                             <i className="material-icons prefix">search</i>
                             <input className="input-field" id="search" type="text" value = {this.state.title} onChange={(e) => this.setState({ title: e.target.value})}></input>
                             <label for="search">Search for movies</label>
-                        </div>                      
-                    </div>                    
+                        </div>    
+                        <button
+                          className="waves-effect waves-light btn"
+                          type="submit" style={btnStyle}>Search</button>                    
+                    </div>             
                 </form>
             </div>
         )

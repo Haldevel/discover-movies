@@ -4,6 +4,7 @@ import SearchBar from './SearchBar';
 import MoviesList from './MoviesList';
 
 
+
 class App extends React.Component {
 
     state = {movies: []};

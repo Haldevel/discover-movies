@@ -16,8 +16,7 @@ const titleDiv = {
     opacity: ".8",
     padding: "0, 5%, 30px, 5%",
     color: "#FFF"
-
-}
+};
 
 
 const MoviesList = props => {
@@ -34,10 +33,10 @@ const MoviesList = props => {
 
         <div className="row"> 
             {props.movies.map(movie => (
-                <div className="col m4 l3">
+                <div key = {movie.id} className="col m4 l3">
                     <div className="card medium z-depth-1 hoverable">
                         <div className="card-image">
-                            <img className="responsive-img" style={imageStyle} src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} />
+                            <img className="responsive-img" alt={movie.title} style={imageStyle} src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} />
                             <span className="card-title" style={titleDiv}>{movie.title}</span>
                         </div>
                         <div className="card-content">
@@ -45,7 +44,7 @@ const MoviesList = props => {
                             <p className="truncate">{movie.overview}</p>
                         </div>
                         <div className="card-action">
-                            <a class =" teal-text  text-lighten-1" href="#">Click for details</a>
+                            <a className =" teal-text  text-lighten-1" href="#">Click for details</a>
                         </div>
                     </div>
                 </div>
