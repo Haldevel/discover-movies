@@ -9,7 +9,7 @@ import Movie from "../pages/Movie";
 
 const App = () => {
     return (
-        <Router>
+        <Router basename="/discover-movies">
             <div>
                 <Switch>
                     <Route exact path="/" component={Homepage} />
