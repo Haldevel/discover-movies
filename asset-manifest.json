@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/discover-movies/static/js/main.21b96b4b.chunk.js",
-    "main.js.map": "/discover-movies/static/js/main.21b96b4b.chunk.js.map",
+    "main.js": "/discover-movies/static/js/main.bbf57c2c.chunk.js",
+    "main.js.map": "/discover-movies/static/js/main.bbf57c2c.chunk.js.map",
     "runtime~main.js": "/discover-movies/static/js/runtime~main.bb346cbd.js",
     "runtime~main.js.map": "/discover-movies/static/js/runtime~main.bb346cbd.js.map",
     "static/js/2.6a7edef8.chunk.js": "/discover-movies/static/js/2.6a7edef8.chunk.js",
     "static/js/2.6a7edef8.chunk.js.map": "/discover-movies/static/js/2.6a7edef8.chunk.js.map",
     "index.html": "/discover-movies/index.html",
-    "precache-manifest.7dbfd1c782386f56517a5f1af9aa378e.js": "/discover-movies/precache-manifest.7dbfd1c782386f56517a5f1af9aa378e.js",
+    "precache-manifest.ea9367f85a02482f622da4b7c4d37803.js": "/discover-movies/precache-manifest.ea9367f85a02482f622da4b7c4d37803.js",
     "service-worker.js": "/discover-movies/service-worker.js"
   }
 }
