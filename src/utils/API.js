@@ -4,6 +4,7 @@ const POPQUERY = "discover/movie?sort_by=popularity.desc&page=1&include_adult=fa
 const SEARCHPATH = "search/movie?query=";
 const SINGLEPATH = "https://api.themoviedb.org/3/movie/";
 const APIKEY = "&api_key=" + process.env.REACT_APP_MOVIE_KEY;
+const APIKEYQUERY = "?api_key=" + process.env.REACT_APP_MOVIE_KEY;
 
 export default {
 
@@ -19,7 +20,7 @@ export default {
 
   //the method gets a single movie data
   getSingleMovie: function(id) {
-    return axios.get(BASEURL + SINGLEPATH + id + APIKEY);
+    return axios.get(SINGLEPATH + id + APIKEYQUERY);
   }
 
 };

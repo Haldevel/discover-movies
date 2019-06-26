@@ -27,11 +27,18 @@ class Homepage extends React.Component {
             .catch(err => console.log(err));
     };
 
+    //a class method which will be called from the child component SearchBar
     onSearchSubmit = (title) => {
-        console.log(title);
         this.search(title);
     };
 
+    //a class method which will be clled from the child component MoviesList
+    routeChangeAddItem = () => {
+        console.log("id " + this.state._id);
+        this.props.history.push("/postitem/" + this.state._id);
+      };   
+
+    //we use two components to render 
     render() {
         return <div className="container">
             <SearchBar onSubmit = {this.onSearchSubmit}/> 
