@@ -3,8 +3,15 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 
 const imageStyle = {
-    marginTop: "20px"
+    display: "block",
+    marginLeft: "auto",
+    marginRight: "auto",
+    marginTop: "40px"
 };
+
+const info = {
+    marginLeft: "10px"
+}
 
 class Movie extends React.Component {
 
@@ -24,7 +31,6 @@ class Movie extends React.Component {
     // When this component mounts, get all data for one movie with the id passed as a parameter
     componentDidMount() {
         const { id } = this.props.match.params;
-        console.log(id);
         this.setState({ id });
         this.getMovie(id);
     }
@@ -32,10 +38,12 @@ class Movie extends React.Component {
     getMovie = (id) => {
         API.getSingleMovie(id)
             .then(res => {
+                //map the returned genres array to the array containing only genres names
+                const gen = res.data.genres.map(genre => genre.name);
                 this.setState({
                     budget: res.data.budget,
                     title: res.data.original_title,
-                    genres: res.data.genres,
+                    genres: gen,
                     overview: res.data.overview,
                     poster: res.data.poster_path,
                     release_date: res.data.release_date,
@@ -49,69 +57,65 @@ class Movie extends React.Component {
 
 
     render() {
-        console.log(this.state.genres)
+
+        //make a string of all genres for the movie
+        let genresStr = this.state.genres[0];
+        for (let i = 1; i < this.state.genres.length; i++) 
+            { genresStr = genresStr + ", " + this.state.genres[i] }
+
         return (
             <div className="container">
                 <div className="divider"></div>
                 <div className="section">
-                    <div class="row valign-wrapper">
-                        <div class="col s3">
+                    <div className="row valign-wrapper">
+                        <div className="col s4 center-align">
                             <h5>{this.state.title}</h5>
                         </div>
-                        <div class="col s9">
+                        <div className="col s1">                            
+                        </div>
+                        <div className="col s7">
                             <p>{this.state.overview}</p>
                         </div>
                     </div>
                 </div>
                 <div className="divider"></div>
-                <div class="row">
-
-                    <div class="col s3">
-
-                        <img className="circle responsive-img z-depth-1" style={imageStyle} alt={this.state.title} src={`https://image.tmdb.org/t/p/w200/${this.state.poster}`} />
+                <div className="row">
+                    <div className="col s4">
+                       <img className="circle responsive-img z-depth-1" style={imageStyle} alt={this.state.title} src={`https://image.tmdb.org/t/p/w200/${this.state.poster}`} />
                     </div>
-                    <div class="col s5">
-                    
+                    <div className="col s1"> 
                     </div>
-                    <div class="col s4">
+                    <div className="col s7">
                         <div className="section">
-                            <h6>Release Date: {this.state.release_date}</h6>
+                            <h6><b><i>Release Date:</i></b> <span style={info}>{this.state.release_date}</span></h6>
                         </div>
                         <div className="divider"></div>
                         <div className="section">
-                            <h6> Budget: {this.state.budget}</h6>
+                            <h6><b><i>Budget:</i></b> <span style={info}>{this.state.budget}</span></h6>
                         </div>
                         <div className="divider"></div>
                         <div className="section">
-                            <h6> Popularity: {this.state.popularity}</h6>
+                            <h6><b><i>Popularity:</i></b> <span style={info}>{this.state.popularity}</span></h6>
                         </div>
                         <div className="divider"></div>
                         <div className="section">
-                            <h6> Voted Rating: {this.state.vote_average}</h6>
+                            <h6><b><i>Voted Rating:</i></b> <span style={info}>{this.state.vote_average}</span></h6>
                         </div>
                         <div className="divider"></div>
                         <div className="section">
-                            <h6> Vote Count: {this.state.vote_count}</h6>
+                            <h6><b><i>Vote Count:</i></b> <span style={info}>{this.state.vote_count}</span></h6>
                         </div>
                         <div className="divider"></div>
                         <div className="section">
-                            <h6> Genres: </h6>
+                            <h6><b><i>Genres:</i></b> <span style={info}>{genresStr}</span></h6>
                         </div>
                         <div className="divider"></div>
-
-
                     </div>
-
                 </div>
-
-
-
             </div>
         )
 
     }
-
-
 
 }
 
