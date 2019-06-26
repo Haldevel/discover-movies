@@ -40,7 +40,7 @@ const MoviesList = props => {
                             <span className="card-title" style={titleDiv}>{movie.title}</span>
                         </div>
                         <div className="card-content">
-                            <h6>Popularity Rating: {movie.vote_average}</h6>
+                            <h6>Popularity: {movie.popularity}</h6>
                             <p className="truncate">{movie.overview}</p>
                         </div>
                         <div className="card-action">
