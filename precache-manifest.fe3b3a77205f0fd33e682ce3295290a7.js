@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cfdbdd14c125277f72fe166689819775",
+    "revision": "d1e84876f235b0856c0156c32172bd8c",
     "url": "/discover-movies/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/discover-movies/static/js/2.93b785ea.chunk.js"
   },
   {
-    "revision": "05e5b424a52085558020",
-    "url": "/discover-movies/static/js/main.b4ba2937.chunk.js"
+    "revision": "53044b56684bffdc8313",
+    "url": "/discover-movies/static/js/main.c935fa3a.chunk.js"
   },
   {
     "revision": "bd91ac70dd881f6c0efd",
