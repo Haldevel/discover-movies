@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 const imageStyle = {
-    //maxHeight: "350px",
     margin: "auto",
     display: "block"
 };
@@ -15,17 +14,14 @@ const titleDiv = {
     height: "50px",
     background: "#00838f",
     opacity: ".8",
-    padding: "0, 5%, 30px, 5%",
+  /*   padding: "20px, 5%, 30px, 5%", */
     color: "#FFF"
 };
 
 
 const MoviesList = props => {
 
-
-
-
-    /*  the code commented out but it can be used to display a list of movies
+    /*  the code is commented out but it can be used to display a list of movies
     return (
       <ul className="list-group">
      {props.movies.map(movie => (
