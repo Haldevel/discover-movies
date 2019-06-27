@@ -1,6 +1,6 @@
 import React from 'react';
 import API from "../utils/API";
-import { Link } from "react-router-dom";
+
 
 const imageStyle = {
     display: "block",
@@ -11,6 +11,10 @@ const imageStyle = {
 
 const info = {
     marginLeft: "10px"
+}
+
+const infoTitle = {
+    color: "#555"
 }
 
 class Movie extends React.Component {
@@ -87,27 +91,27 @@ class Movie extends React.Component {
                     </div>
                     <div className="col s7">
                         <div className="section">
-                            <h6><b><i>Release Date:</i></b> <span style={info}>{this.state.release_date}</span></h6>
+                            <h6 style={infoTitle}><b><i>Release Date:</i></b> <span style={info}>{this.state.release_date}</span></h6>
                         </div>
                         <div className="divider"></div>
                         <div className="section">
-                            <h6><b><i>Budget:</i></b> <span style={info}>{this.state.budget}</span></h6>
+                            <h6 style={infoTitle}><b><i>Budget:</i></b><span style={info}>{this.state.budget}</span></h6>
                         </div>
                         <div className="divider"></div>
                         <div className="section">
-                            <h6><b><i>Popularity:</i></b> <span style={info}>{this.state.popularity}</span></h6>
+                            <h6 style={infoTitle}><b><i>Popularity:</i></b> <span style={info}>{this.state.popularity}</span></h6>
                         </div>
                         <div className="divider"></div>
                         <div className="section">
-                            <h6><b><i>Voted Rating:</i></b> <span style={info}>{this.state.vote_average}</span></h6>
+                            <h6 style={infoTitle}><b><i>Voted Rating:</i></b> <span style={info}>{this.state.vote_average}</span></h6>
                         </div>
                         <div className="divider"></div>
                         <div className="section">
-                            <h6><b><i>Vote Count:</i></b> <span style={info}>{this.state.vote_count}</span></h6>
+                            <h6 style={infoTitle}><b><i>Vote Count:</i></b> <span style={info}>{this.state.vote_count}</span></h6>
                         </div>
                         <div className="divider"></div>
                         <div className="section">
-                            <h6><b><i>Genres:</i></b> <span style={info}>{genresStr}</span></h6>
+                            <h6 style={infoTitle}><b><i>Genres:</i></b> <span style={info}>{genresStr}</span></h6>
                         </div>
                         <div className="divider"></div>
                     </div>

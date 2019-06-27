@@ -6,14 +6,14 @@ const imageStyle = {
     display: "block"
 };
 const titleDiv = {
-    fontSize: "22px",
+    fontSize: "20px",
     position: "absolute",
     bottom: "0",
     left: "0",
     width: "100%",
     height: "50px",
     background: "#00838f",
-    opacity: ".8",
+    opacity: ".85",
   /*   padding: "20px, 5%, 30px, 5%", */
     color: "#FFF"
 };
@@ -34,7 +34,7 @@ const MoviesList = props => {
 
         <div className="row">
             {props.movies.map(movie => (
-                <div key={movie.id} className="col m4 l3">
+                <div key={movie.id} className="col s12 m4 l3">
                     <div className="card medium z-depth-1 hoverable">
                         <div className="card-image">
                             <img className="responsive-img" alt={movie.title} style={imageStyle} src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} />
