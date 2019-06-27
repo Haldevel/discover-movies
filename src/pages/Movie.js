@@ -44,7 +44,7 @@ class Movie extends React.Component {
             .then(res => {
                 //map the returned genres array to the array containing only genres names
                 const gen = res.data.genres.map(genre => genre.name);
-                this.setState({
+                this.setState({  //set state with the values received
                     budget: res.data.budget,
                     title: res.data.original_title,
                     genres: gen,
