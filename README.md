@@ -31,7 +31,7 @@ The calls to the external api were implemented with Axios and are located in the
 
 The routing was implemented itilizing react-router-dom package and using BrowserRouter object. 
 
-To consume the Movie Database API, I had to apply for the API key, which I stored in .env file and which is not uploaded to the github for security reasons. The .env file is itilized with the help of dotenv package. 
+To consume the Movie Database API, I had to apply for the API key, which I stored in .env file and which is not uploaded to the github for security reasons. The .env file is utilized with the help of dotenv package. 
 
 --------------------------------------------
 
